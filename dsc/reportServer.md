@@ -1,3 +1,14 @@
+---
+title:   Using a DSC report server
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Using a DSC report server
 
 > Applies To: Windows PowerShell 5.0
@@ -156,7 +167,7 @@ AdditionalData       : {}
 By default, the reports are sorted by **JobID**. To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:
 
 ```powershell
-$reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
+$reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
@@ -225,3 +236,4 @@ Note that these examples are meant to give you an idea of what you can do with r
 - [Configuring the Local Configuration Manager](metaConfig.md)
 - [Setting up a DSC web pull server](pullServer.md)
 - [Setting up a pull client using configuration names](pullClientConfigNames.md)
+

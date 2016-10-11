@@ -1,3 +1,14 @@
+---
+title:   DSC Configurations
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # DSC Configurations
 
 >Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -37,9 +48,9 @@ Within a **Configuration** block, you can do anything that you normally could in
 Configuration MyDscConfiguration {
 
 	param(
-        [string[]]$computerName="localhost"
+        [string[]]$ComputerName="localhost"
     )
-	Node $computerName {
+	Node $ComputerName {
 		WindowsFeature MyFeatureInstance {
 			Ensure = "Present"
 			Name =	"RSAT"
@@ -52,7 +63,7 @@ Configuration MyDscConfiguration {
 }
 ```
 
-In this example, you specify the name of the node by passing it as the $computerName parameter when you [compile the configuraton](# Compiling the configuration). The name defaults to "localhost".
+In this example, you specify the name of the node by passing it as the $ComputerName parameter when you [compile the configuraton](# Compiling the configuration). The name defaults to "localhost".
 
 ## Compiling the configuration
 Before you can enact a configuration, you have to compile it into a MOF document. You do this by calling the configuration like you would a PowerShell function.
@@ -80,7 +91,7 @@ If the configuration takes a parameter, as in the second example, that has to be
 
 ```powershell
 PS C:\users\default\Documents\DSC Configurations> . .\MyDscConfiguration.ps1
-PS C:\users\default\Documents\DSC Configurations> MyDscConfiguration -computerName 'MyTestNode'
+PS C:\users\default\Documents\DSC Configurations> MyDscConfiguration -ComputerName 'MyTestNode'
     Directory: C:\users\default\Documents\DSC Configurations\MyDscConfiguration
 Mode                LastWriteTime         Length Name                                                                                              
 ----                -------------         ------ ----                                                                                         
@@ -119,3 +130,4 @@ Once these modules have been placed in `$env:PSModulePath` and are properly reco
 * [Windows PowerShell Desired State Configuration Overview](overview.md)
 * [DSC Resources](resources.md)
 * [Configuring The Local Configuration Manager](metaConfig.md)
+

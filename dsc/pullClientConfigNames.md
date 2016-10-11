@@ -1,3 +1,14 @@
+---
+title:   Setting up a pull client using configuration names
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Setting up a pull client using configuration names
 
 > Applies To: Windows PowerShell 5.0
@@ -113,6 +124,7 @@ configuration PullClientConfigID
         ReportServerWeb CONTOSO-ReportSrv
         {
             ServerURL = 'https://CONTOSO-ReportSrv:8080/PSDSCPullServer.svc'
+            RegistrationKey = '6b392c6a-818c-4b24-bf38-47124f1e2f14'
         }
     }
 }
@@ -123,3 +135,4 @@ PullClientConfigID
 
 * [Setting up a pull client with configuration ID](pullClientConfigID.md)
 * [Setting up a DSC web pull server](pullServer.md)
+

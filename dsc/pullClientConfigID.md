@@ -1,3 +1,14 @@
+---
+title:   Setting up a pull client using configuration ID
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Setting up a pull client using configuration ID
 
 > Applies To: Windows PowerShell 5.0
@@ -17,7 +28,7 @@ configuration PullClientConfigID
         Settings
         {
             RefreshMode = 'Pull'
-            ConfigurationID = 1d545e3b-60c3-47a0-bf65-5afc05182fd0'
+            ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
             RefreshFrequencyMins = 30 
             RebootNodeIfNeeded = $true
         }
@@ -149,3 +160,4 @@ PullClientConfigID
 ## See Also
 
 * [Setting up a pull client with configuration names](pullClientConfigNames.md)
+
