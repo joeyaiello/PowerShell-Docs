@@ -141,15 +141,9 @@ Gets the registered session configurations on the computer.
 ### [get-verb](get-verb.md)
 {{Manually Enter get-verb Description Here}}
 
-### [help](help.md)
-{{Manually Enter help Description Here}}
-
 ### [Import-Module](import-module.md)
 Adds modules to the current session.
 
-
-### [importsystemmodules](importsystemmodules.md)
-{{Manually Enter importsystemmodules Description Here}}
 
 ### [Invoke-Command](invoke-command.md)
 Runs commands on local and remote computers.
@@ -160,7 +154,7 @@ Runs commands from the session history.
 
 
 ### [mkdir](mkdir.md)
-{{Manually Enter mkdir Description Here}}
+A built-in function that uses `New-Item` to create a new directory.
 
 ### [more](more.md)
 {{Manually Enter more Description Here}}
