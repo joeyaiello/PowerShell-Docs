@@ -197,10 +197,6 @@ Sends output to the command line.
 ### [Out-Null](out-null.md)
 Deletes output instead of sending it down the pipeline.
 
-
-### [pause](pause.md)
-{{Manually Enter pause Description Here}}
-
 ### [prompt](prompt.md)
 {{Manually Enter prompt Description Here}}
 
@@ -265,7 +261,7 @@ Starts a Windows PowerShell background job.
 Stops a Windows PowerShell background job.
 
 
-### [tabexpansion2](tabexpansion2.md)
+### [TabExpansion2](TabExpansion2.md)
 {{Manually Enter tabexpansion2 Description Here}}
 
 ### [Test-ModuleManifest](test-modulemanifest.md)
