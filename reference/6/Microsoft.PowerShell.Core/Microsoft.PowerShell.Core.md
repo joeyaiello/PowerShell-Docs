@@ -157,7 +157,7 @@ Runs commands from the session history.
 A built-in function that uses `New-Item` to create a new directory.
 
 ### [more](more.md)
-{{Manually Enter more Description Here}}
+A built-in function that paginates output.
 
 ### [New-Module](new-module.md)
 Creates a new dynamic module that exists only in memory.
