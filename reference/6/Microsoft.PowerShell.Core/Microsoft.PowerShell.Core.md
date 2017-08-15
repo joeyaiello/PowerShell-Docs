@@ -186,10 +186,6 @@ Creates an object that contains advanced options for a PSSession.
 ### [New-PSTransportOption](new-pstransportoption.md)
 Creates an object that contains advanced options for a session configuration.
 
-
-### [oss](oss.md)
-{{Manually Enter oss Description Here}}
-
 ### [Out-Default](out-default.md)
 Sends the output to the default formatter and to the default output cmdlet.
 
