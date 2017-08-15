@@ -65,8 +65,6 @@ Note: for this example, you must run wps_2 as an Administrator.
 ```
 PS C:\>$query = "SELECT * FROM CIM_InstModification WHERE TargetInstance ISA 'Win32_LocalTime'"
 
-
-
 PS C:\>Register-CimIndicationEvent -Query $query -SourceIdentifier "Timer"
 ```
 
@@ -75,8 +73,6 @@ This set of commands uses a query to subscribe to an event generated whenever th
 ### Example 3: Execute Run a script when the event arrivesRun
 ```
 PS C:\>$action = {$name = $event.SourceEventArgs.NewEvent.ProcessName; $id = $event.SourceEventArgs.NewEvent.ProcessId; Write-Host -Object "New Process Started : Name = $name; ID = $id"}
-
-
 
 PS C:\>Register-CimIndicationEvent -ClassName 'Win32_ProcessStartTrace' -SourceIdentifier "ProcessStarted" -Action $action
 ```
@@ -90,8 +86,6 @@ For more information about Win32_ProcessStartTrace, see http://msdn.microsoft.co
 ### Example 4: Register the events on a remote computer
 ```
 PS C:\>Register-CimIndicationEvent -ClassName 'Win32_ProcessStartTrace' -SourceIdentifier "ProcessStarted" -ComputerName Server01
-
-
 
 PS C:\>Get-Event -SourceIdentifier "ProcessStarted"
 ```
@@ -140,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassName
-Specifies the indication class to which you are subscribing. 
+Specifies the indication class to which you are subscribing.
 NOTE: You can use tab completion to browse the list of classes, because wps_2 gets a list of classes from the local WMI server to provide a list of class names.
 
 ```yaml
@@ -214,7 +208,7 @@ Accept wildcard characters: False
 ### -Namespace
 Specifies the namespace for the CIM operation.
 
-The default namespace is root/cimv2. 
+The default namespace is root/cimv2.
 NOTE: You can use tab completion to browse the list of namespaces, because wps_2 gets a list of namespaces from the local WMI server to provide the list of namespaces.
 
 ```yaml
@@ -324,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTriggerCount
-{{Fill MaxTriggerCount Description}}
+
+Specifies a maximum number of times that the action will be run when the event is triggered.
 
 ```yaml
 Type: Int32
@@ -352,15 +347,14 @@ This cmdlet outputs a PS EventSubscription object.
 
 ## RELATED LINKS
 
-[Get-Event](../microsoft.powershell.utility/get-event.md)
+[Get-Event](../Microsoft.PowerShell.Utility/Get-Event.md)
 
-[Remove-Event](../microsoft.powershell.utility/remove-event.md)
+[Remove-Event](../Microsoft.PowerShell.Utility/Remove-Event.md)
 
-[Unregister-Event](../microsoft.powershell.utility/unregister-event.md)
+[Unregister-Event](../Microsoft.PowerShell.Utility/Unregister-Event.md)
 
-[Write-Host](../microsoft.powershell.utility/write-host.md)
+[Write-Host](../Microsoft.PowerShell.Utility/Write-Host.md)
 
-[Get-CimSession](get-cimsession.md)
+[Get-CimSession](Get-CimSession.md)
 
-[New-CimSession](new-cimsession.md)
-
+[New-CimSession](New-CimSession.md)

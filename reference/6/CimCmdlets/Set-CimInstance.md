@@ -9,7 +9,7 @@ external help file:  Microsoft.Management.Infrastructure.CimCmdlets.dll-Help.xml
 # Set-CimInstance
 
 ## SYNOPSIS
-Modifies a CIM instance on a CIM server by calling the ModifyInstance method of the CIM class..
+Modifies a CIM instance on a CIM server by calling the ModifyInstance method of the CIM class.
 
 ## SYNTAX
 
