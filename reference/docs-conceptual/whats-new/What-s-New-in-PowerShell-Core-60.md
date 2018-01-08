@@ -315,7 +315,6 @@ We've made *many* improvements to performance across PowerShell,
 including in startup time, various built-in cmdlets, and interaction with native binaries.
 <!-- This statement is too vague we need more meat here. -->
 
-
 - Fix performance issues in `Add-Type`. (#5243) (Thanks @iSazonov!)
 
 ## Bug fixes
@@ -347,3 +346,4 @@ You can find out more about how we use this data in this [blog post][telemetry-b
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
 [FAQ]: https://github.com/dotnet/standard/blob/master/docs/faq.md
 [CDXML]: https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx
+
